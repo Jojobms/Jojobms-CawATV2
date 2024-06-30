@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="princi.css">
+    <title>Makoto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        var normal = "imgs/makotonormal.png";
+        var battle = "imgs/makotobattle.png";
+        var temp;
+
+        function troca() {
+            document.getElementById("charaimg").src = normal;
+            temp = normal;
+            normal = battle;
+            battle = temp;
+        }
+
+        var i = 1;
+        var p2 = "imgs/orpheus.png"
+        var p1 = "imgs/messiah2.png"
+        var temp2;
+
+function troca2() {
+    if (i == 1) {
+        psoname.innerHTML = "Messiah";
+        psotext.innerHTML = `
+        O termo messias (em hebraico) ou Cristo (em grego) é 
+        proeminente dentro das muitas religiões do mundo, especialmente 
+        nas religiões abraâmicas Judaísmo e Cristianismo. Um messias 
+        é considerado um salvador da humanidade que traria salvação 
+        perto do fim dos dias, embora as opiniões sobre quem o termo 
+        messias se refere difiram entre as religiões.
+
+        A opinião mais comum no Ocidente é a cristã, que sustenta que 
+        o messias é Jesus Cristo. Outras figuras messiânicas 
+        apareceram tanto na história quanto no mito, e as pessoas 
+        colocaram suas esperanças nelas para a salvação, Buda, Krishna 
+        e Maitreya sendo exemplos.`;
+
+        document.getElementById("psoimg").src = p1;
+        temp2 = p1;
+        p1 = p2;
+        p2 = temp2;
+
+        i = 0;
+    } else {
+        psoname.innerHTML = "Orpheus";
+        psotext.innerHTML = `
+        Na mitologia grega, Orfeu era filho do rei trácio Oeagrus e da musa Calíope (algumas versões 
+        têm o pai de Orfeu como o deus Apolo). Apolo, apaixonado por Orfeu, deu-lhe uma pequena lira 
+        dourada, que ele rapidamente dominou. Ensinado a cantar versos por sua mãe, Orfeu era tão 
+        hábil em fazer música que foi chamado de “Mestre das Cordas” e “Pai das Canções”, capaz de 
+        fazer uma música que até pedras e animais seriam obrigados a dançar.
+
+        Após a morte de sua esposa Eurídice, Orfeu ficou tão perturbado que seu canto triste levou 
+        ninfas e deuses às lágrimas. Viajando para o submundo, ele usou sua música para amolecer os 
+        corações de Hades e Perséfone, que lhe permitiram trazer sua esposa de volta ao mundo 
+        superior com a condição de que ele andasse na frente e não olhasse para trás até que ambos 
+        chegassem à superfície. . Em sua ansiedade, Orfeu esqueceu seu aviso e olhou para trás 
+        quando só ele chegou à superfície e viu sua esposa desaparecer, desta vez para sempre.
+
+        No momento de sua morte, Orfeu havia se tornado um apóstata, rejeitando todos os deuses, 
+        exceto Apolo, a quem agradeceu por sua lira dourada. Por isso ele foi despedaçado pelas 
+        Ménades Dionisíacas (embora de acordo com outras versões, ele seja despedaçado por se 
+        recusar a participar de suas orgias bêbadas (e muitas vezes canibais), por permanecer 
+        comprometido com sua amante perdida), apenas sua cabeça e lira restante. Sua cabeça flutuou 
+        pelo Hebrus, continuando a cantar canções tristes até ser enterrada na ilha de Lesbos, 
+        enquanto sua lira era levada ao céu pelas musas e colocada entre as estrelas.`;
+
+        document.getElementById("psoimg").src = p1;
+        temp2 = p1;
+        p1 = p2;
+        p2 = temp2;
+
+        i = 1;
+    }
+}
+    </script>
+</head>
+<body class="bodch" style="background-image: linear-gradient(white,#c0d5e8,#a5d6fa);">
+    <header class="cabch">
+        <section class="backg">
+            <img src="imgs/p3rcabc.gif" alt="" width="100%" height="165px">
+            <img src="imgs/p3logohead__1_-removebg-preview.png" alt="" style="position: absolute; top: 2%; left: 5%;">
+        </section>
+        <ul class="navegação">
+            <li> <a href="index.html">Página inicial</a></li>
+            <li><a href="#charactitle">Personagem</a></li>
+            <li><a href="#psoname">Persona</a></li>
+            <li><a href="release.html">Lançamentos</a></li>
+        </ul>
+        <img id="clock" src="imgs/dark hour clock.png" alt="" style="height: 85px;">
+    </header>
+
+    <section class="biog">
+        <h1 id="charactitle">Makoto Yuki</h1>
+        <img id="charaimg" src="imgs/makotonormal.png" alt="" > 
+        <img id="imgtroca" src="imgs/troca.png" onmouseover="this.src = 'imgs/trocahov.png'" onmouseout="this.src = 'imgs/troca.png'" alt="" style="width: 8%;  cursor: pointer; margin-top: 45%;" onclick="troca()">
+        <pre id="prebiog">   
+            Um aluno do segundo ano que se transferiu para a Gekkoukan High School 
+        na primavera, retornando para a ilha onde morou quando criança.
+        Depois que um encontro com um monstro assustador o desperta para o poder 
+        da Persona, ele é recrutado pelo Esquadrão Especializado de 
+        Execução Extracurricular (SEES).
+            A primeira Persona que desperta dentro dele é Orpheus, mas ele acaba 
+        sendo um caso especial que pode trocar entre múltiplas 
+        Personas à vontade, dando ao jogador grande flexibilidade
+        na estratégia de batalha. 
+            </pre>
+            <img src="imgs/makotodarkhour.png" alt="" style="float: right; width: 35%;  margin-top: 1%; padding-right: 12%;">
+
+    </section>
+
+    <section class="persona">
+        <h1 id="psoname">Orpheus</h1>
+        <img id="psoimg" src="imgs/orpheus.png" alt="" width="30%" style="float: right;"> 
+        <img id="imgtroca" src="imgs/troca.png" onmouseover="this.src = 'imgs/trocahov.png'" onmouseout="this.src = 'imgs/troca.png'" alt="" style="float: right; width: 8%;" onclick="troca2()">
+        <pre id="psotext">                   
+        Na mitologia grega, Orfeu era filho do rei trácio Oeagrus e da musa Calíope (algumas versões 
+        têm o pai de Orfeu como o deus Apolo). Apolo, apaixonado por Orfeu, deu-lhe uma pequena lira 
+        dourada, que ele rapidamente dominou. Ensinado a cantar versos por sua mãe, Orfeu era tão 
+        hábil em fazer música que foi chamado de “Mestre das Cordas” e “Pai das Canções”, capaz de 
+        fazer uma música que até pedras e animais seriam obrigados a dançar.
+
+        Após a morte de sua esposa Eurídice, Orfeu ficou tão perturbado que seu canto triste levou 
+        ninfas e deuses às lágrimas. Viajando para o submundo, ele usou sua música para amolecer os 
+        corações de Hades e Perséfone, que lhe permitiram trazer sua esposa de volta ao mundo 
+        superior com a condição de que ele andasse na frente e não olhasse para trás até que ambos 
+        chegassem à superfície. . Em sua ansiedade, Orfeu esqueceu seu aviso e olhou para trás 
+        quando só ele chegou à superfície e viu sua esposa desaparecer, desta vez para sempre.
+
+        No momento de sua morte, Orfeu havia se tornado um apóstata, rejeitando todos os deuses, 
+        exceto Apolo, a quem agradeceu por sua lira dourada. Por isso ele foi despedaçado pelas 
+        Ménades Dionisíacas (embora de acordo com outras versões, ele seja despedaçado por se 
+        recusar a participar de suas orgias bêbadas (e muitas vezes canibais), por permanecer 
+        comprometido com sua amante perdida), apenas sua cabeça e lira restante. Sua cabeça flutuou 
+        pelo Hebrus, continuando a cantar canções tristes até ser enterrada na ilha de Lesbos, 
+        enquanto sua lira era levada ao céu pelas musas e colocada entre as estrelas.
+        </pre>
+
+    </section>
+
+    <footer class="rdp">
+        <h1>Detalhes adicionais</h1>
+        <pre>Título:                                                  Persona 3 Reload</pre>
+        <pre>Data de lançamento:                         02/02/2024 (Disponível AGORA!!)</pre>
+        <pre>Gênero:                                                RPG - JRPG - Turn based RPG</pre>
+        <pre>Plataformas:                                       Steam - Playstation 4 - Playstation 5 - Xbox one - Xbox Series - Windows</pre>
+        <h1>Links</h1>
+        <pre>Twitter oficial</pre>
+        <pre>Youtube oficial</pre>
+        <br>
+        <fi/figure id="platimgs">
+            <img src="imgs/xboxsx.webp" alt="">
+            <img src="imgs/steam.webp" alt="">
+            <img src="imgs/ps45.webp" alt="">
+            <img src="imgs/windos.webp" alt="">
+            <img src="imgs/xone.webp" alt="">
+            <hr>
+            <img src="imgs/atlus.webp" alt="" >
+            <img src="imgs/pstudio.webp" alt="" >
+        </figure>
+    </footer>
+</body>
+</html>

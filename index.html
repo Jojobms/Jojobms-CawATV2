@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="princi.css">
+    <title>Persona 3 Reload</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        let carrossel = 1;
+        passarImg(carrossel);
+    
+        
+        function passarImg(i) {
+            let imagens = $(".carrossel");
+    
+            if (i > imagens.length) {
+                carrossel = 1;
+            }   
+            if (i < 1) {
+                carrossel = imagens.length;
+            }
+    
+            imagens.hide().eq(carrossel - 1).show();
+        }
+    
+        $("#voltar, #proximo").click(function() {
+            if ($(this).attr("id") == "voltar") {
+                passarImg(carrossel -= 1);
+            } else {
+                passarImg(carrossel += 1);
+            }
+        });
+    });
+    </script>
+    
+</head>
+<body>
+    <header>
+            <section class="backg">
+                <img src="imgs/p3renaagua.gif" alt=""  style=" max-width: 100%; height: 850px;">
+                <img src="imgs/p3_logo.png" alt="" style="position: absolute; top: 40%; left: 60%; width: 30%;">
+                <img src="imgs/p3logohead (1).png" alt="" style="position: absolute; top: 2%; left: 5%;">
+            </section>
+            <ul class="navegação">
+                <li> <a href="#introname">Introdução</a></li>
+                <li><a href="#gamepname">Gameplay</a></li>
+                <li><a href="#personaname">Personagens</a></li>
+                <li><a href="#lançaname">Lançamentos</a></li>
+            </ul>
+            <img id="clock" src="imgs/dark hour clock.png" alt="" style="height: 85px;">
+    </header>
+
+    <section class="Intro">
+        <p id="introname">Introdução</p>
+        <pre id="introtext"> <img src="imgs/gekkoukan.jpg" alt="" style="float: right; width: 47%;  padding-right: 20px; background-color: #c0d5e8;">
+    A vida nem sempre corre como planeado e você - como protagonista - transfere-se para
+    a Gekkoukan High School, localizada no centro da Ilha do Porto 
+    Tatsumi, feita pelo homem, apenas para que uma 
+    criatura aterrorizante ataque o seu dormitório.
+
+    No meio do caos, você desperta para sua Persona 
+    – uma força poderosa que pode ser usada para revidar.
+            
+    Um grupo de outras pessoas que compartilham esse poder recruta você para seu 
+    Esquadrão Especializado de Execução Extracurricular (S.E.E.S.), e assim 
+    começa sua jornada para descobrir os mistérios por trás desses incidentes...</pre>
+    </section>
+
+    <section class="Gameplay">
+        <p id="gamepname">Gameplay</p>
+        <pre id="gametext"> <video src="video/p3video.mp4" controls style="width: 47%; float: left;padding-left: 20px;"></video>
+            A experiência do Persona 3 torna-se ainda mais agradável, mantendo 
+            a sua originalidade.
+
+            Um sistema de batalha mais emocionante e novos gráficos e sistemas tornam 
+            o Tártaro mais fácil e fi/figureertido de explorar. 
+            A vida e a jogabilidade fora de combate também evoluíram legitimamente!
+
+            O "Baton pass", que permite aos jogadores confiar suas ações aos seus aliados 
+            durante o 1MORE, será adicionado como uma mudança neste título!
+            Adicionando novas estratégias, a habilidade 
+            única de Teurgia pode ser usada para liberar técnicas poderosas.
+        </pre>
+    </section>
+
+    <section class="Personagens">
+        <p id="personaname">Personagens</p>
+
+        <figure class="carrossel">
+            <a href="makoto.html">
+            <img src="imgs/makoto.png" style="width: 100%; height: auto;" alt="">
+            <figcaption id="figcapname">Makoto (protagonista) &#8594;</figcaption>
+            </a>
+        </figure>
+        <figure class="carrossel">
+            <img src="imgs/yukari.png" style="width: 100%;" alt="">
+            <figcaption id="figcapname">Yukari &#8594; </figcaption>
+        </figure>
+        <figure class="carrossel">
+            <img src="imgs/junpei.png" style="width: 100%;" alt="">
+            <figcaption id="figcapname">Junpei &#8594; </figcaption>
+        </figure>
+        <figure class="carrossel">
+            <img src="imgs/akihiko.png" style="width: 100%;" alt="">
+            <figcaption id="figcapname">Akihiko &#8594; </figcaption>
+        </figure>
+        <figure class="carrossel">
+            <img src="imgs/mitsuru.png" style="width: 100%;" alt="">
+            <figcaption id="figcapname">Mitsuru &#8594; </figcaption>
+        </figure>
+        <figure class="carrossel">
+            <img src="imgs/aigis.png" style="width: 100%;" alt="">
+            <figcaption id="figcapname">Aigis &#8594; </figcaption>
+        </figure>
+        <p id="proximo">&#11162;</p>
+        <p id="voltar">&#11160;</p>
+    </section>
+
+    <section class="lança">
+        <p id="lançaname">Lançamentos</p>
+        <table>
+            <tr>
+                <th><img src="imgs/p3rdlc.webp" style="height: 200px;" alt=""></th>
+                <th><img src="imgs/p3limited.png" style="height: 220px;" alt=""></th>
+                <th><img src="imgs/p3rvynil.webp" style="height: 220px;" alt=""></th>
+            </tr>
+            <tr>
+                <td><h1>Persona 3 Reload <br>- AIGIS EPISODE</h1></td>
+                <td><h1>Persona 3 Reload <br>- LIMITED BOX</h1></td>
+                <td><h1>Persona 3 Reload <br>- VINIL : DISCO 1</h1></td>
+            </tr>
+        </table>
+
+        <p id="Vermais"><a href="release.html">Ver tudo &#11146;</a></p>
+    </section>
+
+    <footer class="rdp">
+        <h1>Detalhes adicionais</h1>
+        <pre>Título:                                                  Persona 3 Reload</pre>
+        <pre>Data de lançamento:                         02/02/2024 (Disponível AGORA!!)</pre>
+        <pre>Gênero:                                                RPG - JRPG - Turn based RPG</pre>
+        <pre>Plataformas:                                       Steam - Playstation 4 - Playstation 5 - Xbox one - Xbox Series - Windows</pre>
+        <h1>Links</h1>
+        <pre>Twitter oficial</pre>
+        <pre>Youtube oficial</pre>
+        <br>
+        <fi/figure id="platimgs">
+            <img src="imgs/xboxsx.webp" alt="">
+            <img src="imgs/steam.webp" alt="">
+            <img src="imgs/ps45.webp" alt="">
+            <img src="imgs/windos.webp" alt="">
+            <img src="imgs/xone.webp" alt="">
+            <hr>
+            <img src="imgs/atlus.webp" alt="" >
+            <img src="imgs/pstudio.webp" alt="" >
+        </figure>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,427 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+    margin: 0px;
+}
+
+.navegação {
+    list-style-type: none;
+    position: absolute;
+    top: 1%;
+    left: 45%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    color: #1d384a;
+    font-size: 25px;
+  }
+  
+  li a:hover {
+    color: red;
+    font-size: 37px;
+  }
+
+  #clock {
+    position: absolute;
+    top: 1%;
+    left: 92%;
+  }
+
+  .Intro {
+    background-color: #c0d5e8;
+    margin-top: -4px;
+    padding-top: 150px;
+  }
+
+  #introname {
+    font-family: "Playfair Display", serif;
+    font-size: 85px;
+    padding-left: 20px;
+    color: #1d384a;
+  }
+
+  #introtext {
+    font-family: "Urbanism", sans-serif;
+    font-size: 15px;
+    color: #1d384a;
+    overflow: auto;
+    line-height: 25px;
+  }
+
+  
+  .Gameplay, .lança {
+    background-color: #c0d5e8;
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+
+  #gamepname {
+    font-family: "Playfair Display", serif;
+    font-size: 85px;
+    color: #1d384a;
+    padding-left: 52%;
+
+  }
+
+  #gametext, #psotext{
+    font-family: "Urbanism", sans-serif;
+    font-size: 15px;
+    color: #1d384a;
+    overflow: auto;
+    line-height: 25px;
+  }
+
+
+.Personagens{
+  max-width: 100%;
+  background-color: #5ba4d7;
+  padding-bottom: 50px;
+}
+
+
+
+.carrossel:hover{
+  transform: scale(1.04);
+}
+
+#personaname {
+  font-family: "Playfair Display", serif;
+  font-size: 85px;
+  color: #1d384a;
+  padding-left: 20px;
+}
+
+#figcapname {
+  font-family: "Playfair Display", serif;
+  color: white;
+  padding-left: 51%;
+  font-size: 25px;
+}
+
+
+#voltar, #proximo {
+  cursor: pointer;
+
+  font-size: 18px;
+}
+
+
+#proximo {
+  float: right;
+  font-size: 100px;
+}
+
+#voltar {
+  font-size: 100px;
+}
+
+
+#voltar:hover, #proximo:hover {
+  color: red;
+}
+
+.carrossel {
+  animation-name: fade;
+  animation-duration: 0.7s;
+}
+
+@keyframes fade {
+  from{
+   opacity: 0;
+  }
+  to {
+   opacity: 1 ; 
+  }
+ }
+ 
+ #lançaname {
+  font-family: "Playfair Display", serif;
+  font-size: 85px;
+  color: #1d384a;
+  padding-left: 30%;
+  padding-bottom: 10px;
+ }
+
+.lança table {
+  border-radius: 10px; 
+  margin: auto;
+  border-spacing: 20px;
+  background-color: #5ba4d7; 
+}
+
+.lança th {
+  border-spacing: 10px ;
+  border: 3px ridge black; 
+  background-color: #c0d5e8; 
+  border-radius: 10px;
+}
+
+table h1 {
+  font-family:  "Playfair Display", serif;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  background-color: #5ba4d7; 
+}
+
+#Vermais {
+  font-size: 37px;
+  color: #1d384a;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  padding-top: 30px;
+}
+
+.lança a {
+  text-decoration: none;
+  color: #1d384a;
+}
+
+.lança a:hover {
+  color: red;
+  font-size: 42px;
+}
+
+.rdp {
+  padding-top: 100px;
+}
+
+.rdp > h1{
+  font-family: "Bebas Neue", sans-serif;
+  color: #1d384a;
+  font-size: 30px;
+  padding-left: 35px;
+  padding-top: 20px;
+}
+
+.rdp > pre {
+  font-family:  "Playfair Display", serif;
+  font-size: 15px;
+  color: #1d384a;
+  padding-left: 35px;
+  padding-top: 15px;
+}
+
+
+#platimgs {
+  padding-top: 20px;
+}
+
+#platimgs > img {
+  padding-left: 35px;
+  padding-bottom: 20px;
+}
+
+
+.biog {
+  padding-bottom: 80%;
+}
+
+.biog img {
+  width: 60%;
+  margin-left: -20%;
+  float: left;
+  overflow: auto;
+  animation-name: fade; 
+  animation-duration: 3.5s; 
+  padding-left: 3%;
+}
+
+#charactitle {
+  float: right;
+  padding-top: 5%;
+  padding-right: 6%;
+  color: #1d384a;
+  font-family:  "Playfair Display", serif;
+  font-size: 90px;
+}
+
+.biog pre {
+  float: right;
+  overflow: auto;
+  font-family: "Urbanism", sans-serif;
+  line-height: 25px;
+  color: #1d384a;
+  margin-right: 30px;
+}
+
+
+
+#psoname {
+  font-family: "Playfair Display", serif;
+  font-size: 85px;
+  padding-left: 50px;
+  color: #1d384a;
+}
+
+.persona {
+  padding-bottom: 30%;
+}
+
+hr {
+  border-color: #1d384a;
+}
+
+
+
+.tabel {
+  height: 256px;
+  width: 70%;
+  border: 2px solid black;
+  margin: auto;
+  margin-top: 3%;
+  border-spacing: 15px;
+  background-color: #498ec0;
+  border-collapse: separate;
+}
+
+.new {
+  background-image:linear-gradient(white,#c0d5e8,#a5d6fa);
+  padding-bottom: 10%;
+}
+
+#contitle {
+  text-align: center;
+  margin-top: 10%;
+  font-family: "Bebas Neue", sans-serif;
+  color: #1d384a;
+  font-size: 70px;
+}
+
+#imgtab {
+  background-color: #c0d5e8;
+  border-radius: 10%;
+}
+
+th img {
+  height: 256px;
+  width: 100%;
+}
+
+
+#buyn {
+  border: none;
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #001daa;
+  color: #c0d5e8;
+  border-radius: 25%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#buyn:hover {
+  background-color:  #07cceb;
+  color: #1d384a;
+  transform: scale(1.1);
+}
+
+.makcont {
+  background-image:linear-gradient(#a5d6fa,#95d0fa,#7ac2f5,#fac7ff);
+  padding-top: 1%;
+  padding-bottom: 10%;
+}
+
+.yukacont {
+  background-image:linear-gradient(#fac7ff,#efadf5,#f098f8,#ffa5aa);
+  padding-top: 1%; 
+  padding-bottom: 10%;
+}
+
+.tabelY {
+  background-color: #e857f5;
+  height: 256px;
+  width: 70%;
+  border: 2px solid black;
+  margin: auto;
+  margin-top: 3%;
+  border-spacing: 15px;
+  border-collapse: separate;
+}
+
+#buyy {
+  border: none;
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #001daa;
+  color: #c0d5e8;
+  border-radius: 25%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#buyy:hover {
+  background-color:  #07cceb;
+  color: #1d384a;
+  transform: scale(1.1);
+}
+
+
+.mitcont {
+  background-image:linear-gradient(#ffa5aa,#fd858b,#ff545c,#ffc0c0);
+  padding-top: 1%;
+  padding-bottom: 20%; 
+}
+
+.tabelM {
+  background-color: #f55757;
+  height: 256px;
+  width: 70%;
+  border: 2px solid black;
+  margin: auto;
+  margin-top: 3%;
+  border-spacing: 15px;
+  border-collapse: separate;
+}
+
+.rel {
+  background-image:linear-gradient(#ffc0c0,#fde7e7,#fdfcfc);
+}
+.lateral {
+  height: 400%;
+  width: 11%;
+  position: absolute;
+  left: 88%;
+  border-left: 1px dashed #07cceb;
+  margin-top: -4px;
+}
+
+.lateral img {
+  display: block;
+  width: 105%;
+  height: 400px;
+  padding-top: 20px;
+}
+
+#closead {
+  width: 10%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#bs {
+  margin-top: 600px;
+}
